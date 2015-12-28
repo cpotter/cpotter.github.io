@@ -1,3 +1,9 @@
+---
+title: Chris Potter Blog
+published_at: 2015-12-28 1:20 PM
+author: Chris Potter
+tags: ghost-render
+---
 # Chris Potter Blog: ghost-render
 
 This blog is an attempt to keep track of and organize a variety of my personal
