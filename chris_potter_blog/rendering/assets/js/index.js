@@ -1,98 +1,75 @@
 /**
- * Main JS file for Casper behaviours
+ * Main JS file for GhosToro behaviours
  */
 
-/* globals jQuery, document */
-(function ($, sr, undefined) {
+/*globals jQuery, document */
+(function ($) {
     "use strict";
 
-    var $document = $(document),
+    $(document).ready(function(){
+        // Push down the blog at the beginning.
+    	var home = $('.home-template');
+    	var centered = $('.v-center');
+        var homeContent = $('.content');
+    	var t;
 
-        // debouncing function from John Hann
-        // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-        debounce = function (func, threshold, execAsap) {
-            var timeout;
+    	if (home.length !== 0) {
+	    	$(window).resize(function() {
+	    		clearTimeout(t);
+				t = setTimeout(setHeight(), 100);
+			});
 
-            return function debounced () {
-                var obj = this, args = arguments;
-                function delayed () {
-                    if (!execAsap) {
-                        func.apply(obj, args);
-                    }
-                    timeout = null;
-                }
+	    	setHeight();
+	    }
 
-                if (timeout) {
-                    clearTimeout(timeout);
-                } else if (execAsap) {
-                    func.apply(obj, args);
-                }
+	    function setHeight() {
+    		var headerHeight = $('#header').height();
+    		var windowHeight = $(window).height();
+    		var h = windowHeight - headerHeight;
+    		centered.css('height', h);
+            homeContent.show();
+    	}
 
-                timeout = setTimeout(delayed, threshold || 100);
-            };
-        };
+        // Hide the "scroll down" text on scroll.
+        var scrollDownText = $('.scroll-down');
 
-    $document.ready(function () {
-
-        var $postContent = $(".post-content");
-        $postContent.fitVids();
-
-        function updateImageWidth() {
-            var $this = $(this),
-                contentWidth = $postContent.outerWidth(), // Width of the content
-                imageWidth = this.naturalWidth; // Original image resolution
-
-            if (imageWidth >= contentWidth) {
-                $this.addClass('full-img');
-            } else {
-                $this.removeClass('full-img');
-            }
-        }
-
-        var $img = $("img").on('load', updateImageWidth);
-        function casperFullImg() {
-            $img.each(updateImageWidth);
-        }
-
-        casperFullImg();
-        $(window).smartresize(casperFullImg);
-
-        $(".scroll-down").arctic_scroll();
-
-    });
-
-    // smartresize
-    jQuery.fn[sr] = function(fn) { return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
-
-    // Arctic Scroll by Paul Adam Davis
-    // https://github.com/PaulAdamDavis/Arctic-Scroll
-    $.fn.arctic_scroll = function (options) {
-
-        var defaults = {
-            elem: $(this),
-            speed: 500
-        },
-
-        allOptions = $.extend(defaults, options);
-
-        allOptions.elem.click(function (event) {
-            event.preventDefault();
-            var $this = $(this),
-                $htmlBody = $('html, body'),
-                offset = ($this.attr('data-offset')) ? $this.attr('data-offset') : false,
-                position = ($this.attr('data-position')) ? $this.attr('data-position') : false,
-                toMove;
-
-            if (offset) {
-                toMove = parseInt(offset);
-                $htmlBody.stop(true, false).animate({scrollTop: ($(this.hash).offset().top + toMove) }, allOptions.speed);
-            } else if (position) {
-                toMove = parseInt(position);
-                $htmlBody.stop(true, false).animate({scrollTop: toMove }, allOptions.speed);
-            } else {
-                $htmlBody.stop(true, false).animate({scrollTop: ($(this.hash).offset().top) }, allOptions.speed);
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 10) {
+                scrollDownText.fadeOut();
+            } else if ($(this).scrollTop() === 0) {
+                scrollDownText.fadeIn();
             }
         });
 
-    };
-})(jQuery, 'smartresize');
+        // Add active class on navigation.
+        var url = window.location.pathname;
+        var navEl = $('#nav a');
+        var urlRegExp = new RegExp(url.replace(/\/$/,'') + "$");
+
+        navEl.each(function(){
+            if(urlRegExp.test(this.href.replace(/\/$/,''))) {
+                $(this).addClass('active');
+            }
+        });
+
+        // If blog images are larger than viewport set width to 100% to be responsive.
+        var contentImages = $('.content img');
+
+        $(window).resize(function() {
+            clearTimeout(t);
+            t = setTimeout(setImgWidth(), 100);
+        });
+
+        setImgWidth();
+
+        function setImgWidth() {
+            var windowWidth = $(window).width();
+            if (contentImages.width() > windowWidth) {
+                contentImages.css('width', '100%');
+            } else {
+                contentImages.css('width', 'auto');
+            }
+        }
+    });
+
+}(jQuery));

@@ -1,0 +1,31 @@
+// Convert all font size to 'rem' if supported. rem > em > px
+// Usage: .font-size(1.6); (1.6 rem/em and 16px);
+// http://pxtoem.com/
+.font-size(@sizeValue) {
+  @remValue: 	@sizeValue;
+  @emValue: 	@sizeValue;
+  @pxValue: 	(@sizeValue * 10);
+  font-size: 	~"@{pxValue}px"; 
+  font-size: 	~"@{remValue}em";
+  font-size: 	~"@{remValue}rem";
+}
+
+// Sometimes you need element to be 100% width minus a small portion in pixels. Here we are.
+// Usage:.fullWidth(30); Return width: 100% (relative) - 30px;
+.fullWidth(@width) {
+	width: calc(~'100% - @{width}px');
+}
+
+// Sometimes you need element to be 100% height minus a small portion in pixels. Here we are.
+// Usage:.fullHeight(30); Return width: 100% (relative) - 30px;
+.fullHeight(@height) {
+	height: calc(~'100% - @{height}px');
+}
+
+// Animate element on load
+.showit(@duration) {
+	animation-name: showit;
+    animation-iteration-count: once;
+    animation-timing-function: ease-in;
+    animation-duration: @duration;
+}
