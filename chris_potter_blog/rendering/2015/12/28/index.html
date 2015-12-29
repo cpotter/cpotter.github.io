@@ -135,7 +135,7 @@
 
             <span class="post-meta"><time datetime="2015-12-28">December 28th, 2015</time> on <a href="/tag/ghost-render/">ghost-render</a></span>
 
-            <h1 class="post-title">Chris Potter Blog</h1>
+            <h1 class="post-title">Chris Potter Ghost Render Blog</h1>
 
             <section class="post-content">
                 <h1 id="chris-potter-blog-ghost-render">Chris Potter Blog: ghost-render</h1>
@@ -154,8 +154,44 @@ what I actually start!  This blog is the first on my list.</p>
 </ul>
 <h2 id="how-was-this-blog-built-">How was this blog built?</h2>
 <p>This blog was built using <a href="https://github.com/mixu/ghost-render">ghost-render</a>.<br>Using github&#39;s pages to render the final blog, locally I am writing these posts
-in markdown, which is ideal.</p>
-
+in markdown, which is ideal.  It was rather tricky to set up however.  There were
+a couple unintuitive things I needed to do in order to get the repo working perfectly.
+I will try and review the process I went through.  Some steps may be basic, but
+it will be best to be thorough for all audiences. (that&#39;s being optimistic!)</p>
+<h3 id="step-1-create-username-repo">Step 1: Create username repo</h3>
+<p>Since I wanted to host the blog with github, this step was the easiest.  Creating
+a repo called <username>.github.io will automatically created a hosted static website
+to display your website.</p>
+<h3 id="step-2-setting-up-the-local-environment">Step 2: Setting up the local environment</h3>
+<pre class="hljs"><code>git clone &lt;username<span class="hljs-class">.github</span><span class="hljs-class">.io</span> repo&gt;
+cd &lt;username<span class="hljs-class">.github</span><span class="hljs-class">.io</span> repo&gt;</code></pre><p>Once inside this repo follow the instructions for <a href="https://github.com/mixu/ghost-render">ghost-render</a>.
+I decided to do the entire process within a folder called chris_potter_blog/ in the repo.<br>I will recount them here for good measure.</p>
+<pre class="hljs"><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> -<span class="hljs-keyword">g</span> ghost-render
+ghost-render <span class="hljs-comment">--init &gt; settings.json</span></span></code></pre><h4 id="themes">Themes</h4>
+<p>I decided the theme(s) should be organized into their own folder for cleanliness.
+I decided to try and jump between themes for testing.  Each theme I decided to fork
+into my personal repo so that I could make changes and commit those changes to my
+own theme.</p>
+<h4 id="build-process">Build process</h4>
+<p>I decided to write my own bash script to compile my blog. Creating the script is
+simple:</p>
+<pre class="hljs"><code>touch <span class="hljs-keyword">compile</span>
+chmod +x <span class="hljs-keyword">compile</span></code></pre><p>within that file I added the following code:</p>
+<pre class="hljs"><code><span class="hljs-shebang">#!/bin/bash
+</span>
+ghost-render --input ./blog/ --settings ./settings.json --theme ./themes/Swaggy-Bastard --output ./rendering</code></pre><p>running <code>sh compile</code> within the chris_potter_blog folder will create the rendering/
+folder with the contents of the blog.  Once this is complete, from the base folder
+of the repo, run</p>
+<pre class="hljs"><code>ln <span class="hljs-operator">-s</span> chris_potter_blog/rendering/* .
+touch .nojekyll</code></pre><p>I decided to symlink the information in the rendering folder to try and keep the
+repo relatively clean and tidy for the build process.  If you feel this is overkill,
+then don&#39;t do it!</p>
+<p>The final issue lies with the themes repos declared under the themes folder. Git
+considers these sub-repos of the blog.  So I needed to <code>touch .gitmodules</code> and within
+that file have:</p>
+<pre class="hljs"><code>[submodule <span class="hljs-string">&quot;chris_potter_blog/themes/Swaggy-Bastard&quot;</span>]
+    path = chris_potter_blog<span class="hljs-regexp">/themes/</span>Swaggy-Bastard
+    url = <span class="hljs-string">https:</span><span class="hljs-comment">//github.com/cpotter/Swaggy-Bastard.git</span></code></pre>
             </section>
 
             <footer class="post-footer">
@@ -165,13 +201,13 @@ in markdown, which is ideal.</p>
                     <p>Just a guy.</p>
                     <ul class="author-meta clearfix">
                         <li> </li>
-                        <li><a href="http://localhost:5000/author/foo">http://localhost:5000/author/foo</a></li>
+                        
                     </ul>
                 </section>
 
                 <section class="share">
                     <h4>Share this post</h4>
-                    <a class="icon-twitter" href="http://twitter.com/share?text=Chris%20Potter%20Blog&url=http://cpotter.github.io/2015/12/28/index.html"
+                    <a class="icon-twitter" href="http://twitter.com/share?text=Chris%20Potter%20Ghost%20Render%20Blog&url=http://cpotter.github.io/2015/12/28/index.html"
                         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                         <span class="hidden">Twitter</span>
                     </a>

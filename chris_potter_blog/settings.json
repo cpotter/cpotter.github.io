@@ -10,7 +10,6 @@
     "default": {
       "name": "Chris Potter",
       "bio": "Just a guy.",
-      "website": "http://localhost:5000/author/foo",
       "image": "http://lorempixel.com/155/155/people/",
       "cover": "http://lorempixel.com/1100/425/animals/",
       "slug": "foo"
