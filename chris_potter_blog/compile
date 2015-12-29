@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ghost-render --input ./blog/ --settings ./settings.json --theme ./themes/Swaggy-Bastard --output ./rendering
