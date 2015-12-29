@@ -1,0 +1,3 @@
+[submodule "chris_potter_blog/themes/Swaggy-Bastard"]
+    path = chris_potter_blog/themes/Swaggy-Bastard
+    url = https://github.com/cpotter/Swaggy-Bastard.git
