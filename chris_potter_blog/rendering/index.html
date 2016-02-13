@@ -1,215 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Chris Potter</title>
     <meta name="description" content="" />
-
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="/favicon.ico">
-
-    <link rel="stylesheet" type="text/css" href="/assets/css/bastard.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
-
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
-
+    <link href="//fonts.googleapis.com/css?family=Noto+Sans:300,400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="/favicon.ico" rel="shortcut icon">
     <meta name="generator" content="Ghost ?" />
 <link rel="alternate" type="application/rss+xml" title="Chris Potter" href="/rss/index.xml">
 <link rel="canonical" href="http://cpotter.github.io/index.html" />
-
-    <script src="/assets/js/jquery.min.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event){
-                event.preventDefault();
-                $('html.body').animate({scrollTop:$(this.hash).offset().top},600);
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            $('.toTop').click(function () {
-                $("html, body").animate({
-                    scrollTop: 0
-                }, 600);
-            return false;
-            });
-
-        });
-    </script>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-53698734-1', 'gferreira.me'); //Replace with your valid ID
-      ga('send', 'pageview');
-
-    </script>
-  </head>
+</head>
 <body class="">
-    <!-- Side Menu -->
-        <!--Gravatar link, update avatar image url to use your own; s = size in pixels -->
-        <!-- Update gravatar link to use ur own. Use s=64 to make avatar still look good on retina displays -->
-        
-        <a id="slidemenu-toggle" href="http://cpotter.github.io" class="site-nav-logo"><span class="logo" style="background-image: url(/assets/images/bow3.svg)"></span></a>        <!-- /Gravatar link -->
-    <div id="slidemenu-wrapper">
-        <ul class="slidemenu-nav">
-          <a id="slidemenu-close" href="#" class="btn btn-md pull-right toggle"><i class="fa fa-chevron-circle-left fa-2x"></i></a>
-          <li>
-            <a href="http://cpotter.github.io">
-              <i class="fa fa-home fa-2x"></i> HOME
-            </a>
-          </li>
-          <li><a href="http://cpotter.github.io/about">
-            <i class="fa fa-male fa-2x"></i> ABOUT</a>
-          </li>
-          <li>
-            <a href="http://cpotter.github.io/rss/">
-              <i class="fa fa-rss  fa-2x"></i> SUBSCRIBE
-            </a>
-          </li>
-          <li class="slidemenu-divider"></li>
-          <li>
-            CATEGORIES
-          </li>
-          <li>
-            <a href="http://cpotter.github.io/tag/ghost-render">
-              <i class="fa fa-code fa-2x"></i> Ghost Render
-            </a>
-          </li>
-          <li>
-            <a href="http://cpotter.github.io/tag/magento">
-              <i class="fa fa-code fa-2x"></i> Magento
-            </a>
-          </li>
-          <li>
-            <a href="http://cpotter.github.io/tag/meteor-js">
-              <i class="fa fa-code fa-2x"></i> Meteor-JS
-            </a>
-          </li>
-          <li>
-            <a href="http://cpotter.github.io/tag/node-js">
-              <i class="fa fa-code fa-2x"></i> Node-JS
-            </a>
-          </li>
-          <li>
-            <a href="http://cpotter.github.io/tag/thoughts">
-              <i class="fa fa-coffee fa-2x"></i> THOUGHTS
-            </a>
-          </li>
-        
-          <li class="slidemenu-divider"></li>
-          <li>
-            FOLLOW
-          </li>
-          <li>
-            <a href="https://github.com/cpotter" target="_blank">
-              <i class="fa fa-github fa-2x"></i> GITHUB
-            </a>
-          </li>
-        
-        
-        </ul>
-    </div>
-    <!-- /Side Menu -->
-
-    
-
-
-<header class="site-head" style="background-image: url(http://lorempixel.com/1920/1280/nature/)">
-
-    <div class="panel-cover-overlay"></div>
-    <div class="vertical">
-        <div class="site-head-content inner">
-                <img src="http://lorempixel.com/45/45/abstract/" alt="Blog Logo" />
-            <h2 class="blog-description">Personal Coding Projects</h2>
-            <ul class="list-inline">
-                <li><a href="https://github.com/cpotter/" class="btn-social btn-outline" data-toggle="tooltip" data-placement="top" title="Github" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/profile/view?id=AAMAAAM-UkwBmGW7ES9NCxm8yWLw_tnZZ_29nYw&trk=hp-identity-photo" class="btn-social btn-outline" title="LinkedIn" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a>
-                </li>
-                <li><a href="mailto:chris.potter.3d@gmail.com" class="btn-social btn-outline" title="Email" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
-                </li>
+    <header id="header">
+    <div class="header-background">
+    <section class="blog-content animated fadeIn">
+        <a id="site-url" class="blog-title" href="http://cpotter.github.io">Chris Potter</a>
+        <span class="blog-description">Personal Coding Projects</span>
+        <nav class="links fadeIn animated">
+            <ul>
+                <li class="rss"><a title="RSS Feed" href="/rss/"><i class="fa fa-fw fa-rss-square"></i></a></li>
+                <li class="github"><a title="GitHub" href="http://github.com/Reedyn/Saga"><i class="fa fa-fw fa-github-square"></i></a></li>
             </ul>
-
-            <div class="page-scroll">
-                <a href="#main" class="btn btn-circle scroll">
-                    <i class="fa fa-angle-down fa-2x animated"></i>
-                </a>
-            </div>
-        </div>
+        </nav>    </section>
     </div>
-
 </header>
-
-<main class="content" role="main" id="main">
-
-
-    <article class="post tag-ghost-render">
-        <header class="post-header">
-                     
+<main id="main" class="archive">
+    <section id="feed" class="feed">
+        <article class="post tag-ghost-render" style="opacity: 0;">
+    
             <h2 class="post-title"><a href="/2015/12/28/index.html">Chris Potter Ghost Render Blog</a></h2>
-            <span class="post-meta"><time datetime="2015-12-28">December 28th, 2015</time> in <a href="/tag/ghost-render/">ghost-render</a></span>
-        </header>
-        <section class="post-excerpt">
-             
-            <p>
-                This blog is an attempt to keep track of and organize a variety of my personal projects.  I&#39;m hoping that by starting this blog it will encourage me to finish what I actually start!  This blog is the first on my list. A few of the things on&hellip;
-                
-                <br style="clear: both;" />
-            </p>           
-        </section>
-
-    </article>
-
-
-
-    <div class="container">
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <nav class="pagination" role="navigation">
-    <span class="page-number">Page 1 of 1</span>
-</nav>
-          </div>
-        </div>    
-    </div>
-
+            <section class="post-content">
+                This blog is an attempt to keep track of and organize a variety of my personal projects.  I&#39;m hoping that by starting this…
+            </section>
+            <section class="post-meta">
+                <span class="date"><i class="fa fa-clock-o"></i> <a href="/2015/12/28/index.html"><time class="timesince" data-timesince="1451326800" datetime="2015-12-28T13:20" title="28 December 2015">2 months ago</time></a></span>
+                <span class="author"><i class="fa fa-user"></i> <a href="/">Chris Potter</a></span>
+                <span class="tags"><i class="fa fa-tags"></i>
+                    <span>
+                    <a href="/tag/ghost-render/">ghost-render</a></span>
+                </span>
+            </section>
+        </article></section>
+    <nav class="pagination" role="navigation">
+        <span class="page-number">Page 1 of 1</span>
+    </nav>
 </main>
-
-    <footer class="site-footer">
-         <a href="http://cpotter.github.io/rss/"><span class="fa fa-3x fa-rss"></span></a>
-
-        <div class="container">
-            <div class="row">
-                <img src="/assets/images/with_love_in_boston.png">
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                 <section class="copyright">All content copyright <a href="http://cpotter.github.io/">Chris Potter</a> &copy; 2015 &bull; All rights reserved.</section>
-                 <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a> and the <a href="http://github.com/misterGF/swaggy-bastard"><strong>Swaggy Bastard</strong></a> Theme</section>
-            </div>
-            <div class="row">
-
-                 <a id="toTop" class="toTop" href="#"><i class="fa fa-chevron-circle-up fa-2x"></i></a>
-
-            </div>
-        </div>
+    <footer class="animated fadeIn" id="footer">    
+        <section class="colophon">
+            <section class="copyright">Copyright &copy; <span itemprop="copyrightHolder">Chris Potter</span>. <span rel="license">All Rights Reserved</span>.</section>
+            <section class="poweredby">Published with <a class="icon-ghost" href="http://ghost.org"> Ghost</a></section>
+        </section>
+        <section class="bottom">
+            <section class="attribution">
+                <a href="http://github.com/Reedyn/Saga">Built with <i class="fa fa-heart"></i> and Free and Open-Source Software</a>.
+            </section>
+        </section>
     </footer>
-
     <script src="/assets/js/jquery.min.js"></script>
-
-    <script type="text/javascript" src="/assets/js/scripts.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/assets/js/scripts.js"></script>
 </body>
 </html>
