@@ -3,6 +3,7 @@ title: Chris Potter Ghost Render Blog
 published_at: 2015-12-28 1:20 PM
 author: Chris Potter
 tags: ghost-render
+image: ./blog-thumbnail.jpg
 ---
 This blog is an attempt to keep track of and organize a variety of my personal
 projects.  I'm hoping that by starting this blog it will encourage me to finish
