@@ -14,7 +14,7 @@ To review here is the list of things that I claimed I would work on:
  - Freeflow Solver
  - Crafty Spending App with [Charlestronauts](https://github.com/Charlestronauts)
 
- So the big question is...
+So the big question is...
 ### What have I been working on?
 And the winner is, none of the above!  At my job at [Blue Acorn](https://github.com/BlueAcornInc), I have had the priveledge of working on some side projects with [@BriceBurgess](https://github.com/briceburg), our resident Dev-Ops aficionado. Dev-Ops has been a personal goal of mine over the last year to contribute more to [Blue Acorn](https://github.com/BlueAcornInc). One of our major company initiatives has been to coordinate the automation process for building better websites, with continuous integration testing which will result in more robust deployments.  It has been great fun with I am learning a lot.
 
