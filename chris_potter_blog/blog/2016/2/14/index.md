@@ -111,4 +111,4 @@ Then everytime a LoggingEvent is registered for this log4js instance it will tri
 ### To Be Continued
 This was the first step to get logging to hipchat for [BlueAcornInc](https://github.com/BlueAcornInc), but I decided to try to give back to the greater node community by trying to create a pull request back into the original node4js repo.  
 
-This required me to learn the javascript library `vows`.
+This required me to learn the javascript library `vows`.  See you next time.
