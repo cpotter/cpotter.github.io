@@ -1,9 +1,9 @@
 ---
-title: Chris Potter Ghost Render Blog
+title: Ghost Render Blog
 published_at: 2015-12-28 1:20 PM
 author: Chris Potter
 tags: ghost-render
-image: /2015/12/28/blog-thumbnail.jpg
+image: /2015/12/28/images/blog-image.jpg
 ---
 This blog is an attempt to keep track of and organize a variety of my personal
 projects.  I'm hoping that by starting this blog it will encourage me to finish
@@ -28,7 +28,7 @@ it will be best to be thorough for all audiences. (that's being optimistic!)
 
 ### Step 1: Create username repo
 Since I wanted to host the blog with github, this step was the easiest.  Creating
-a repo called <username>.github.io will automatically created a hosted static website
+a repo called <q>username</q>.github.io will automatically created a hosted static website
 to display your website.
 
 ### Step 2: Setting up the local environment

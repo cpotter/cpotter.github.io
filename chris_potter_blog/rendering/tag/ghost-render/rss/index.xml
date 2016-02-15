@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[undefined - Chris Potter]]></title><description><![CDATA[Personal Coding Projects]]></description><link>http://cpotter.github.io/</link><generator>Ghost</generator><lastBuildDate>Sun, 14 Feb 2016 04:14:31 GMT</lastBuildDate><atom:link href="http://cpotter.github.io/tag/undefined/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Chris Potter Ghost Render Blog]]></title><description><![CDATA[<p>This blog is an attempt to keep track of and organize a variety of my personal
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[undefined - Chris Potter]]></title><description><![CDATA[Personal Coding Projects]]></description><link>http://cpotter.github.io/</link><generator>Ghost</generator><lastBuildDate>Mon, 15 Feb 2016 02:01:04 GMT</lastBuildDate><atom:link href="http://cpotter.github.io/tag/undefined/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Ghost Render Blog]]></title><description><![CDATA[<p>This blog is an attempt to keep track of and organize a variety of my personal
 projects.  I&#39;m hoping that by starting this blog it will encourage me to finish
 what I actually start!  This blog is the first on my list.</p>
 <p>A few of the things on my list:</p>
@@ -20,7 +20,7 @@ I will try and review the process I went through.  Some steps may be basic, but
 it will be best to be thorough for all audiences. (that&#39;s being optimistic!)</p>
 <h3 id="step-1-create-username-repo">Step 1: Create username repo</h3>
 <p>Since I wanted to host the blog with github, this step was the easiest.  Creating
-a repo called <username>.github.io will automatically created a hosted static website
+a repo called <q>username</q>.github.io will automatically created a hosted static website
 to display your website.</p>
 <h3 id="step-2-setting-up-the-local-environment">Step 2: Setting up the local environment</h3>
 <pre class="hljs"><code>git clone &lt;username<span class="hljs-class">.github</span><span class="hljs-class">.io</span> repo&gt;

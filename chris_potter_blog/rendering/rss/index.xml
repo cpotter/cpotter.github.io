@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Chris Potter]]></title><description><![CDATA[Personal Coding Projects]]></description><link>http://cpotter.github.io/</link><generator>Ghost</generator><lastBuildDate>Sun, 14 Feb 2016 04:14:31 GMT</lastBuildDate><atom:link href="http://cpotter.github.io/rss/index.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Chris Potter Ghost Render Blog]]></title><description><![CDATA[<p>This blog is an attempt to keep track of and organize a variety of my personal
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Chris Potter]]></title><description><![CDATA[Personal Coding Projects]]></description><link>http://cpotter.github.io/</link><generator>Ghost</generator><lastBuildDate>Mon, 15 Feb 2016 02:01:04 GMT</lastBuildDate><atom:link href="http://cpotter.github.io/rss/index.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Ghost Render Blog]]></title><description><![CDATA[<p>This blog is an attempt to keep track of and organize a variety of my personal
 projects.  I&#39;m hoping that by starting this blog it will encourage me to finish
 what I actually start!  This blog is the first on my list.</p>
 <p>A few of the things on my list:</p>
@@ -20,7 +20,7 @@ I will try and review the process I went through.  Some steps may be basic, but
 it will be best to be thorough for all audiences. (that&#39;s being optimistic!)</p>
 <h3 id="step-1-create-username-repo">Step 1: Create username repo</h3>
 <p>Since I wanted to host the blog with github, this step was the easiest.  Creating
-a repo called <username>.github.io will automatically created a hosted static website
+a repo called <q>username</q>.github.io will automatically created a hosted static website
 to display your website.</p>
 <h3 id="step-2-setting-up-the-local-environment">Step 2: Setting up the local environment</h3>
 <pre class="hljs"><code>git clone &lt;username<span class="hljs-class">.github</span><span class="hljs-class">.io</span> repo&gt;
@@ -51,4 +51,88 @@ considers these sub-repos of the blog.  So I needed to <code>touch .gitmodules</
 that file have:</p>
 <pre class="hljs"><code>[submodule <span class="hljs-string">&quot;chris_potter_blog/themes/Swaggy-Bastard&quot;</span>]
     path = chris_potter_blog<span class="hljs-regexp">/themes/</span>Swaggy-Bastard
-    url = <span class="hljs-string">https:</span><span class="hljs-comment">//github.com/cpotter/Swaggy-Bastard.git</span></code></pre>]]></description><link>/2015/12/28/index.html</link><guid isPermaLink="true">/2015/12/28/index.html</guid><category><![CDATA[ghost-render]]></category><dc:creator><![CDATA[Chris Potter]]></dc:creator><pubDate>Mon, 28 Dec 2015 18:20:00 GMT</pubDate></item></channel></rss>
+    url = <span class="hljs-string">https:</span><span class="hljs-comment">//github.com/cpotter/Swaggy-Bastard.git</span></code></pre>]]></description><link>/2015/12/28/index.html</link><guid isPermaLink="true">/2015/12/28/index.html</guid><category><![CDATA[ghost-render]]></category><dc:creator><![CDATA[Chris Potter]]></dc:creator><pubDate>Mon, 28 Dec 2015 18:20:00 GMT</pubDate></item><item><title><![CDATA[Log4js Appender]]></title><description><![CDATA[<p>To review here is the list of things that I claimed I would work on:</p>
+<ul>
+<li><a href="https://github.com/cpotter/cpotter.github.io">Ghost/Github Blog</a></li>
+<li>Deck of Cards API vanilla node app</li>
+<li>Record Cataloger Meteor App</li>
+<li>Meteor 1000 Books by Kindergarten Meteor App</li>
+<li>Sudoku Solver</li>
+<li>Freeflow Solver</li>
+<li><p>Crafty Spending App with <a href="https://github.com/Charlestronauts">Charlestronauts</a></p>
+<p>So the big question is...</p>
+<h3 id="what-have-i-been-working-on-">What have I been working on?</h3>
+<p>And the winner is, none of the above!  At my job at <a href="https://github.com/BlueAcornInc">Blue Acorn</a>, I have had the priveledge of working on some side projects with <a href="https://github.com/briceburg">@BriceBurgess</a>, our resident Dev-Ops aficionado. Dev-Ops has been a personal goal of mine over the last year to contribute more to <a href="https://github.com/BlueAcornInc">Blue Acorn</a>. One of our major company initiatives has been to coordinate the automation process for building better websites, with continuous integration testing which will result in more robust deployments.  It has been great fun with I am learning a lot.</p>
+</li>
+</ul>
+<h4 id="how-does-this-relate-to-log4js-node-">How does this relate to log4js-node?</h4>
+<p>One of the resources that we use at <a href="https://github.com/BlueAcornInc">Blue Acorn</a> is the Atlassian product, <a href="www.hipchat.com">Hipchat</a>.  Hipchat is slowly being adopted as our company chatting tool, but also as a source of logging and recording for our different Dev-Ops tools.  For our un-hipchat-integrated internal apps, we have been using the <a href="https://github.com/nomiddlename/log4js-node">log4js-node</a> library, which is the node version os <a href="http://stritti.github.io/log4js/docu/users-guide.html">log4js</a>, which allows a user to set log levels for better logging information for your application to log to your console.  However, another feature of the log4js library is the concept of Appenders.</p>
+<h4 id="finally-just-tell-me-what-the-point-is">Finally just tell me what the point is</h4>
+<p>I decided to extend the log4js library to support logging to the hipchat client, using both <a href="https://github.com/nomiddlename/log4js-node">log4js-node</a> and a new node library <a href="https://github.com/germanrcuriel/hipchat-client">hipchat-client</a> with an appender specific to hipchat.  Hipchat-client implements the hipchat V1 api to connect to hipchat, allowing you to post messages or notifications to specific rooms.  Thankfully there were a number of examples provided with the log4js-node github repo but the most useful resource I was able to use was the <a href="https://github.com/chrispotter/log4js-node/blob/hipchat-connection/lib/appenders/mailgun.js">mailgun.js</a>, which functions to allow lof4js to send it&#39;s log through a registered mailgun account.</p>
+<h5 id="lets-look-at-hipchat-js-https-github-com-chrispotter-log4js-node-blob-hipchat-connection-lib-appenders-hipchat-js-">Lets look at <a href="https://github.com/chrispotter/log4js-node/blob/hipchat-connection/lib/appenders/hipchat.js">hipchat.js</a></h5>
+<p>The file is relatively straight forward.  Every log4js appender needs to have 2 distinct functions that the log4js-node library looks for:</p>
+<pre class="hljs"><code><span class="hljs-keyword">exports</span>.name = <span class="hljs-string">&#39;hipchat&#39;</span>;
+<span class="hljs-keyword">exports</span>.configure = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span><span class="hljs-comment">{[...]}</span>;</span>
+<span class="hljs-keyword">exports</span>.appender = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span><span class="hljs-comment">{[...]}</span>;</span></code></pre><p>These functions inform log4js how to configure the new appender, or logging service, within the log4js library.  An <a href="https://github.com/chrispotter/log4js-node/blob/hipchat-connection/examples/hipchat-appender.js">example</a> of how to use the hipchat appender might better inform how these functions work:</p>
+<pre class="hljs"><code><span class="hljs-keyword">var</span> log4js = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#39;log4js-node&#39;</span>);
+
+log4js.configure({
+  <span class="hljs-string">&quot;appenders&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;hipchat&quot;</span>,
+      <span class="hljs-string">&quot;api_key&quot;</span>: <span class="hljs-string">&#39;Hipchat_API_V1_Key&#39;</span>,
+      <span class="hljs-string">&quot;room_id&quot;</span>: <span class="hljs-string">&quot;Room_ID&quot;</span>,
+      <span class="hljs-string">&quot;from&quot;</span>: <span class="hljs-string">&quot;Tester&quot;</span>,
+      <span class="hljs-string">&quot;format&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,
+      <span class="hljs-string">&quot;notify&quot;</span>: <span class="hljs-string">&quot;NOTIFY&quot;</span>,
+      <span class="hljs-string">&quot;category&quot;</span> : <span class="hljs-string">&quot;hipchat&quot;</span>
+    }
+  ]
+});
+
+<span class="hljs-keyword">var</span> logger = log4js.getLogger(<span class="hljs-string">&quot;hipchat&quot;</span>);
+logger.warn(<span class="hljs-string">&quot;Test Warn message&quot;</span>);<span class="hljs-comment">//yellow</span></code></pre><p>When configuring your log4js instance within your application, when you declare your appenders in the json, the log4js module will loop over all the appenders listed in the <code>appenders: [ ]</code> and load them into the library instance by their type, which should match the <code>exports.name</code> provided in the appender, <a href="https://github.com/chrispotter/log4js-node/blob/hipchat-connection/lib/log4js.js#L221">found here</a>. It will bind the above configuration to the appenders <code>exports.configure</code> method based off of the category provided.  Then when <code>.getLogger(&#39;hipchat&#39;)</code> is called, it will load an instance of the saved appender with the bound configuration provided from the json object. When the form of log is called, <code>logger.warn(&#39;Test Warn Message&#39;)</code> or <code>logger.error(&quot;Test Error Message&quot;);</code> this will call the <code>exports.appender</code> method.</p>
+<h4 id="important-appender-functions">Important appender functions</h4>
+<h5 id="-exports-configure-https-github-com-chrispotter-log4js-node-blob-hipchat-connection-lib-appenders-hipchat-js-l41-"><a href="https://github.com/chrispotter/log4js-node/blob/hipchat-connection/lib/appenders/hipchat.js#L41">exports.configure</a></h5>
+<p>Here is our <code>exports.configure</code> function.</p>
+<pre class="hljs"><code>function configure(_config) {
+
+    <span class="hljs-keyword">if</span> (_config.<span class="hljs-keyword">layout</span>) {
+        <span class="hljs-keyword">layout</span> = layouts.<span class="hljs-keyword">layout</span>(_config.<span class="hljs-keyword">layout</span>.type, _config.<span class="hljs-keyword">layout</span>);
+    }
+
+    hipchat = new HipChatClient(_config.api_key);
+
+    <span class="hljs-keyword">return</span> hipchatAppender(_config, <span class="hljs-keyword">layout</span>);
+}</code></pre><p>Basically stated, this function configures the appender instance to set the custom layout for the appender if a layout was established in the json configuration.  It then instantiates the hipchat client for this loggers instance which will connect to hipchat with the specified api_key.  It will then return an instance of the hipchatAppender which informs log4js where to render the formatted text for hipchat.</p>
+<h5 id="-exports-appender-https-github-com-chrispotter-log4js-node-blob-hipchat-connection-lib-appenders-hipchat-js-l20-"><a href="https://github.com/chrispotter/log4js-node/blob/hipchat-connection/lib/appenders/hipchat.js#L20">exports.appender</a></h5>
+<pre class="hljs"><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hipchatAppender</span><span class="hljs-params">(_config, _layout)</span> </span>{
+
+    layout = _layout || layouts.basicLayout;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(loggingEvent)</span> </span>{
+
+        <span class="hljs-keyword">var</span> data = {
+            room_id: _config.room_id,
+            from: _config.from,
+            message: layout(loggingEvent, _config.timezoneOffset),
+            format: _config.format,
+            color: colours[loggingEvent.level.toString()],
+            notify: _config.notify
+        };
+
+        hipchat.api.rooms.message(data, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, res)</span> </span>{
+            <span class="hljs-keyword">if</span> (err) { <span class="hljs-keyword">throw</span> err; }
+        });
+    };
+}</code></pre><p>This function establishes the layout/formatting function for the log4js event that occurs when the <a href="https://github.com/chrispotter/log4js-node/blob/hipchat-connection/lib/logger.js#L18">LoggingEvent</a> is registered for the appenders function. If no layout is specified for the then the log4js basicLayout is used, which just generates a string with the format of [DATETIME][LOG_LEVEL]category - log text.</p>
+<p>Then everytime a LoggingEvent is registered for this log4js instance it will trigger function which will build the <code>var data</code> from the registered configuraton for the appender, and the layout established, and pass the <code>data</code> to the <code>hipchat.api.message</code> function which logs the message to the hipchat client.  </p>
+<h4 id="notables">Notables</h4>
+<p><code>var colours</code> has been appended to this appender since the hipchat colors are more limited than the default log4js colors.  </p>
+<p><code>package.json</code> needs to include <code>hipchat-client</code> or when trying to log to hipchat an error will be thrown that will declare the hipchat module is not found.</p>
+<h6 id="working-hipchat-logger">Working Hipchat logger</h6>
+<p><img src="/2016/2/14/images/hipchat-log.png" alt="Normal"></p>
+<h3 id="to-be-continued">To Be Continued</h3>
+<p>This was the first step to get logging to hipchat for <a href="https://github.com/BlueAcornInc">BlueAcornInc</a>, but I decided to try to give back to the greater node community by trying to create a pull request back into the original node4js repo.  </p>
+<p>This required me to learn the javascript library <code>vows</code>. </p>
+]]></description><link>/2016/2/14/index.html</link><guid isPermaLink="true">/2016/2/14/index.html</guid><category><![CDATA[log4js]]></category><dc:creator><![CDATA[Chris Potter]]></dc:creator><pubDate>Mon, 28 Dec 2015 18:20:00 GMT</pubDate></item></channel></rss>
