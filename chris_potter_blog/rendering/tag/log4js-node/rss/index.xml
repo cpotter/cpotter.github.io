@@ -1,47 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Chris Potter - Chris Potter</title>
-    <meta name="description" content="Just a guy." />
-    <link href="//fonts.googleapis.com/css?family=Noto+Sans:300,400,700" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic" rel="stylesheet" type="text/css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/animate.min.css" rel="stylesheet" type="text/css">
-    <link href="/favicon.ico" rel="shortcut icon">
-    <meta name="generator" content="Ghost ?" />
-<link rel="alternate" type="application/rss+xml" title="Chris Potter" href="/rss/index.xml">
-<link rel="canonical" href="http://cpotter.github.io/2016/2/14/index.html" />
-</head>
-<body class="author-template author-foo post-template tag-log4js-node">
-    <header id="header" class="animated fadeIn" style="background-image: url(/2016/2/14/images/log4js-node.png)">
-    <div class="header-background">
-    <section class="blog-content">
-        <a id="site-url" class="blog-title" href="http://cpotter.github.io">Chris Potter</a>
-        <span class="blog-description">Personal Coding Projects</span>
-        <nav class="links fadeIn animated">
-            <ul>
-                <li class="rss"><a title="RSS Feed" href="/rss/"><i class="fa fa-fw fa-rss-square"></i></a></li>
-                <li class="github"><a title="GitHub" href="http://github.com/Reedyn/Saga"><i class="fa fa-fw fa-github-square"></i></a></li>
-            </ul>
-        </nav>    </section>
-    <section class="header-content">
-        <h1 class="post-title animated fadeInUp">Log4js Appender</h1>
-        <span class="post-data"><span class="date animated fadeInUp"><i class="fa fa-clock-o"></i> <time class="timesince date" data-timesince="1455504420" datetime="2016-02-14T21:47" title="14 February 2016">13 minutes ago</time></span>
-            <span class="tags animated fadeInUp"><i class="fa fa-tags"></i> <a href="/tag/log4js-node/">log4js-node</a></span>
-            <span class="author animated fadeInUp"><i class="fa fa-user"></i> <a href="/">Chris Potter</a></span></span>
-    </section>
-    </div>
-</header>
-<main id="main" class="content">
-    <article itemtype="http://schema.org/BlogPosting" class="animated fadeIn content post post tag-log4js-node">
-        <section class="post-content">
-            <p>To review here is the list of things that I claimed I would work on:</p>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[undefined - Chris Potter]]></title><description><![CDATA[Personal Coding Projects]]></description><link>http://cpotter.github.io/</link><generator>Ghost</generator><lastBuildDate>Mon, 15 Feb 2016 02:59:48 GMT</lastBuildDate><atom:link href="http://cpotter.github.io/tag/undefined/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Log4js Appender]]></title><description><![CDATA[<p>To review here is the list of things that I claimed I would work on:</p>
 <ul>
 <li><a href="https://github.com/cpotter/cpotter.github.io">Ghost/Github Blog</a></li>
 <li>Deck of Cards API vanilla node app</li>
@@ -124,24 +82,4 @@ logger.warn(<span class="hljs-string">&quot;Test Warn message&quot;</span>);<spa
 <h3 id="to-be-continued">To Be Continued</h3>
 <p>This was the first step to get logging to hipchat for <a href="https://github.com/BlueAcornInc">BlueAcornInc</a>, but I decided to try to give back to the greater node community by trying to create a pull request back into the original node4js repo.  </p>
 <p>This required me to learn the javascript library <code>vows</code>.  See you next time.</p>
-
-        </section>
-    </article>
-</main>
-    <footer class="animated fadeIn" id="footer">    
-        <section class="colophon">
-            <section class="copyright">Copyright &copy; <span itemprop="copyrightHolder">Chris Potter</span>. <span rel="license">All Rights Reserved</span>.</section>
-            <section class="poweredby">Published with <a class="icon-ghost" href="http://ghost.org"> Ghost</a></section>
-        </section>
-        <section class="bottom">
-            <section class="attribution">
-                <a href="http://github.com/Reedyn/Saga">Built with <i class="fa fa-heart"></i> and Free and Open-Source Software</a>.
-            </section>
-        </section>
-    </footer>
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="/assets/js/scripts.js"></script>
-</body>
-</html>
+]]></description><link>/2016/2/14/index.html</link><guid isPermaLink="true">/2016/2/14/index.html</guid><category><![CDATA[log4js-node]]></category><dc:creator><![CDATA[Chris Potter]]></dc:creator><pubDate>Mon, 15 Feb 2016 02:47:00 GMT</pubDate></item></channel></rss>
