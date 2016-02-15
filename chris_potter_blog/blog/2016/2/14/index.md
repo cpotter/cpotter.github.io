@@ -1,8 +1,7 @@
 ---
 title: Log4js Appender
-published_at: 2015-12-28 1:20 PM
+published_at: 2016-2-14 9:47 PM
 author: Chris Potter
-tags: log4js
 image: /2016/2/14/images/log4js-node.png
 ---
 To review here is the list of things that I claimed I would work on:

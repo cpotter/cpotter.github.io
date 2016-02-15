@@ -1,57 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Chris Potter]]></title><description><![CDATA[Personal Coding Projects]]></description><link>http://cpotter.github.io/</link><generator>Ghost</generator><lastBuildDate>Mon, 15 Feb 2016 02:18:51 GMT</lastBuildDate><atom:link href="http://cpotter.github.io/rss/index.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Ghost Render Blog]]></title><description><![CDATA[<p>This blog is an attempt to keep track of and organize a variety of my personal
-projects.  I&#39;m hoping that by starting this blog it will encourage me to finish
-what I actually start!  This blog is the first on my list.</p>
-<p>A few of the things on my list:</p>
-<ul>
-<li><a href="https://github.com/cpotter/cpotter.github.io">Ghost/Github Blog</a></li>
-<li>Deck of Cards API vanilla node app</li>
-<li>Record Cataloger Meteor App</li>
-<li>Meteor 1000 Books by Kindergarten Meteor App</li>
-<li>Sudoku Solver</li>
-<li>Freeflow Solver</li>
-<li>Crafty Spending App with <a href="https://github.com/Charlestronauts">Charlestronauts</a></li>
-</ul>
-<h2 id="how-was-this-blog-built-">How was this blog built?</h2>
-<p>This blog was built using <a href="https://github.com/mixu/ghost-render">ghost-render</a>.<br>Using github&#39;s pages to render the final blog, locally I am writing these posts
-in markdown, which is ideal.  It was rather tricky to set up however.  There were
-a couple unintuitive things I needed to do in order to get the repo working perfectly.
-I will try and review the process I went through.  Some steps may be basic, but
-it will be best to be thorough for all audiences. (that&#39;s being optimistic!)</p>
-<h3 id="step-1-create-username-repo">Step 1: Create username repo</h3>
-<p>Since I wanted to host the blog with github, this step was the easiest.  Creating
-a repo called <code>username</code>.github.io will automatically created a hosted static website
-to display your website.</p>
-<h3 id="step-2-setting-up-the-local-environment">Step 2: Setting up the local environment</h3>
-<pre class="hljs"><code>git clone &lt;username<span class="hljs-class">.github</span><span class="hljs-class">.io</span> repo&gt;
-cd &lt;username<span class="hljs-class">.github</span><span class="hljs-class">.io</span> repo&gt;</code></pre><p>Once inside this repo follow the instructions for <a href="https://github.com/mixu/ghost-render">ghost-render</a>.
-I decided to do the entire process within a folder called chris_potter_blog/ in the repo.<br>I will recount them here for good measure.</p>
-<pre class="hljs"><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> -<span class="hljs-keyword">g</span> ghost-render
-ghost-render <span class="hljs-comment">--init &gt; settings.json</span></span></code></pre><h4 id="themes">Themes</h4>
-<p>I decided the theme(s) should be organized into their own folder for cleanliness.
-I decided to try and jump between themes for testing.  Each theme I decided to fork
-into my personal repo so that I could make changes and commit those changes to my
-own theme.</p>
-<h4 id="build-process">Build process</h4>
-<p>I decided to write my own bash script to compile my blog. Creating the script is
-simple:</p>
-<pre class="hljs"><code>touch <span class="hljs-keyword">compile</span>
-chmod +x <span class="hljs-keyword">compile</span></code></pre><p>within that file I added the following code:</p>
-<pre class="hljs"><code><span class="hljs-shebang">#!/bin/bash
-</span>
-ghost-render --input ./blog/ --settings ./settings.json --theme ./themes/Swaggy-Bastard --output ./rendering</code></pre><p>running <code>sh compile</code> within the chris_potter_blog folder will create the rendering/
-folder with the contents of the blog.  Once this is complete, from the base folder
-of the repo, run</p>
-<pre class="hljs"><code>ln <span class="hljs-operator">-s</span> chris_potter_blog/rendering/* .
-touch .nojekyll</code></pre><p>I decided to symlink the information in the rendering folder to try and keep the
-repo relatively clean and tidy for the build process.  If you feel this is overkill,
-then don&#39;t do it!</p>
-<p>The final issue lies with the themes repos declared under the themes folder. Git
-considers these sub-repos of the blog.  So I needed to <code>touch .gitmodules</code> and within
-that file have:</p>
-<pre class="hljs"><code>[submodule <span class="hljs-string">&quot;chris_potter_blog/themes/Swaggy-Bastard&quot;</span>]
-    path = chris_potter_blog<span class="hljs-regexp">/themes/</span>Swaggy-Bastard
-    url = <span class="hljs-string">https:</span><span class="hljs-comment">//github.com/cpotter/Swaggy-Bastard.git</span></code></pre>]]></description><link>/2015/12/28/index.html</link><guid isPermaLink="true">/2015/12/28/index.html</guid><category><![CDATA[ghost-render]]></category><dc:creator><![CDATA[Chris Potter]]></dc:creator><pubDate>Mon, 28 Dec 2015 18:20:00 GMT</pubDate></item><item><title><![CDATA[Log4js Appender]]></title><description><![CDATA[<p>To review here is the list of things that I claimed I would work on:</p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Chris Potter]]></title><description><![CDATA[Personal Coding Projects]]></description><link>http://cpotter.github.io/</link><generator>Ghost</generator><lastBuildDate>Mon, 15 Feb 2016 02:47:59 GMT</lastBuildDate><atom:link href="http://cpotter.github.io/rss/index.xml" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Log4js Appender]]></title><description><![CDATA[<p>To review here is the list of things that I claimed I would work on:</p>
 <ul>
 <li><a href="https://github.com/cpotter/cpotter.github.io">Ghost/Github Blog</a></li>
 <li>Deck of Cards API vanilla node app</li>
@@ -135,4 +83,56 @@ logger.warn(<span class="hljs-string">&quot;Test Warn message&quot;</span>);<spa
 <h3 id="to-be-continued">To Be Continued</h3>
 <p>This was the first step to get logging to hipchat for <a href="https://github.com/BlueAcornInc">BlueAcornInc</a>, but I decided to try to give back to the greater node community by trying to create a pull request back into the original node4js repo.  </p>
 <p>This required me to learn the javascript library <code>vows</code>.</p>
-]]></description><link>/2016/2/14/index.html</link><guid isPermaLink="true">/2016/2/14/index.html</guid><category><![CDATA[log4js]]></category><dc:creator><![CDATA[Chris Potter]]></dc:creator><pubDate>Mon, 28 Dec 2015 18:20:00 GMT</pubDate></item></channel></rss>
+]]></description><link>/2016/2/14/index.html</link><guid isPermaLink="true">/2016/2/14/index.html</guid><dc:creator><![CDATA[Chris Potter]]></dc:creator><pubDate>Mon, 15 Feb 2016 02:47:00 GMT</pubDate></item><item><title><![CDATA[Ghost Render Blog]]></title><description><![CDATA[<p>This blog is an attempt to keep track of and organize a variety of my personal
+projects.  I&#39;m hoping that by starting this blog it will encourage me to finish
+what I actually start!  This blog is the first on my list.</p>
+<p>A few of the things on my list:</p>
+<ul>
+<li><a href="https://github.com/cpotter/cpotter.github.io">Ghost/Github Blog</a></li>
+<li>Deck of Cards API vanilla node app</li>
+<li>Record Cataloger Meteor App</li>
+<li>Meteor 1000 Books by Kindergarten Meteor App</li>
+<li>Sudoku Solver</li>
+<li>Freeflow Solver</li>
+<li>Crafty Spending App with <a href="https://github.com/Charlestronauts">Charlestronauts</a></li>
+</ul>
+<h2 id="how-was-this-blog-built-">How was this blog built?</h2>
+<p>This blog was built using <a href="https://github.com/mixu/ghost-render">ghost-render</a>.<br>Using github&#39;s pages to render the final blog, locally I am writing these posts
+in markdown, which is ideal.  It was rather tricky to set up however.  There were
+a couple unintuitive things I needed to do in order to get the repo working perfectly.
+I will try and review the process I went through.  Some steps may be basic, but
+it will be best to be thorough for all audiences. (that&#39;s being optimistic!)</p>
+<h3 id="step-1-create-username-repo">Step 1: Create username repo</h3>
+<p>Since I wanted to host the blog with github, this step was the easiest.  Creating
+a repo called <code>username</code>.github.io will automatically created a hosted static website
+to display your website.</p>
+<h3 id="step-2-setting-up-the-local-environment">Step 2: Setting up the local environment</h3>
+<pre class="hljs"><code>git clone &lt;username<span class="hljs-class">.github</span><span class="hljs-class">.io</span> repo&gt;
+cd &lt;username<span class="hljs-class">.github</span><span class="hljs-class">.io</span> repo&gt;</code></pre><p>Once inside this repo follow the instructions for <a href="https://github.com/mixu/ghost-render">ghost-render</a>.
+I decided to do the entire process within a folder called chris_potter_blog/ in the repo.<br>I will recount them here for good measure.</p>
+<pre class="hljs"><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> -<span class="hljs-keyword">g</span> ghost-render
+ghost-render <span class="hljs-comment">--init &gt; settings.json</span></span></code></pre><h4 id="themes">Themes</h4>
+<p>I decided the theme(s) should be organized into their own folder for cleanliness.
+I decided to try and jump between themes for testing.  Each theme I decided to fork
+into my personal repo so that I could make changes and commit those changes to my
+own theme.</p>
+<h4 id="build-process">Build process</h4>
+<p>I decided to write my own bash script to compile my blog. Creating the script is
+simple:</p>
+<pre class="hljs"><code>touch <span class="hljs-keyword">compile</span>
+chmod +x <span class="hljs-keyword">compile</span></code></pre><p>within that file I added the following code:</p>
+<pre class="hljs"><code><span class="hljs-shebang">#!/bin/bash
+</span>
+ghost-render --input ./blog/ --settings ./settings.json --theme ./themes/Swaggy-Bastard --output ./rendering</code></pre><p>running <code>sh compile</code> within the chris_potter_blog folder will create the rendering/
+folder with the contents of the blog.  Once this is complete, from the base folder
+of the repo, run</p>
+<pre class="hljs"><code>ln <span class="hljs-operator">-s</span> chris_potter_blog/rendering/* .
+touch .nojekyll</code></pre><p>I decided to symlink the information in the rendering folder to try and keep the
+repo relatively clean and tidy for the build process.  If you feel this is overkill,
+then don&#39;t do it!</p>
+<p>The final issue lies with the themes repos declared under the themes folder. Git
+considers these sub-repos of the blog.  So I needed to <code>touch .gitmodules</code> and within
+that file have:</p>
+<pre class="hljs"><code>[submodule <span class="hljs-string">&quot;chris_potter_blog/themes/Swaggy-Bastard&quot;</span>]
+    path = chris_potter_blog<span class="hljs-regexp">/themes/</span>Swaggy-Bastard
+    url = <span class="hljs-string">https:</span><span class="hljs-comment">//github.com/cpotter/Swaggy-Bastard.git</span></code></pre>]]></description><link>/2015/12/28/index.html</link><guid isPermaLink="true">/2015/12/28/index.html</guid><dc:creator><![CDATA[Chris Potter]]></dc:creator><pubDate>Mon, 28 Dec 2015 18:20:00 GMT</pubDate></item></channel></rss>
