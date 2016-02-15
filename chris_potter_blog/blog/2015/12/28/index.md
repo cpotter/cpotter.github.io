@@ -28,7 +28,7 @@ it will be best to be thorough for all audiences. (that's being optimistic!)
 
 ### Step 1: Create username repo
 Since I wanted to host the blog with github, this step was the easiest.  Creating
-a repo called <q>username</q>.github.io will automatically created a hosted static website
+a repo called `username`.github.io will automatically created a hosted static website
 to display your website.
 
 ### Step 2: Setting up the local environment
